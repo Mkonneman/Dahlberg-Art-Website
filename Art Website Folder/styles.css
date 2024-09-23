@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+}
+
+.image-frame{
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+    max-height: 100%; /* Ensure image doesn't exceed container height */
+    text-align: center; /* Center image horizontally within container */
+}
+
+.image-frame img {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block; /* Make sure the image respects its dimensions */
+    padding: 0;
+}
+.black-background {
+    background-color: black !important;
+    display: flex;
+}
+
+
+
+
+.nav-button button{
+    font-family: 'Patrick Hand', cursive;
+}
+
+
+
+
+
+
+
+
+
+
+
+

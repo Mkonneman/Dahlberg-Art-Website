@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stephanie Dahlberg Art Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+        body {
+            background-color: rgb(100, 52, 52);
+            background-attachment: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .image-frame {
+            position: relative;
+            max-width: 100%;
+            max-height: 100%; /* Adjust height to make space for buttons */
+            text-align: center;
+            flex: 1; /* Allow image frame to take available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-frame img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black; /* Black background for wrapper */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .section {
+            display: none; /* Hide all sections by default */
+        }
+        .section.active {
+            display: flex; /* Show the active section */
+        }
+        .nav-buttons {
+            position: absolute;
+            bottom: 10px; /* Position at the bottom of the image */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .nav-buttons button {
+            background: none;
+            border: none;
+            margin: 10px;
+            font-size: 35px;
+            color: white;
+            cursor: pointer;
+            font-family: 'Patrick Hand', cursive; /* Apply the crayon-like font */
+        }
+        .nav-buttons button:hover {
+            color: rgb(200, 100, 100);
+        }
+        .nav-buttons button:focus {
+            outline: none; /* Remove default outline */
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+            scrollToTop();
+        }
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        function goToHome() {
+            window.location.href = 'home.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show the first section by default
+            showSection('C1');
+        });
+    </script>
+</head>
+<body>
+    <!--This is the commision section-->
+
+    <!--Page 1 Commisions-->
+    <div id="C1" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite C1.jpg" alt="Commmision 1" usemap="#home-image-map-C1">
+
+            <map name="home-image-map-C1">
+                <!-- Define clickable areas using <area> tags -->
+                <area shape="poly" coords="40,368,738,368,738,764,664,764,664,904,40,904" href="javascript:void(0);" onclick="showSection('C11I')"  alt="Commision 1">
+                <area shape="rect" coords="696,801,1107,1398" href="javascript:void(0);" onclick="showSection('C12I')" alt="Visit our gallery">
+            </map>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('C1')">&lt 1</button>
+                <button onclick="showSection('C2')">2</button>
+                <button onclick="showSection('C3')">3</button>
+                <button onclick="showSection('C4')">4 &gt</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+    <!-- Page 1 ISO's -->
+    <div id="C11I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Commision 1 ISO.jpg" alt="Commision 1 ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('C1')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="C12I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Commision 2 ISO.jpg" alt="Commision 2 ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('C1')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    
+    <!--Page 2 Commisions-->
+    <div id="C2" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite C2.jpg" alt="Commmision 2" usemap="#home-image-map-C2">
+
+            <map name="home-image-map-C2">
+                <!-- Define clickable areas using <area> tags -->
+                <area shape="poly" coords="409,302,1166,302,1166,897,824,897,824,813,409,812" href="javascript:void(0);" onclick="showSection('C21I')" alt="Commision 3">
+                <area shape="poly" coords="71,839,790,839,790,1048,685,1048,685,1378,71,1378" href="javascript:void(0);" onclick="showSection('C22I')" alt="Commision 4">
+            </map>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('C1')">&lt 1</button>
+                <button onclick="showSection('C2')">2</button>
+                <button onclick="showSection('C3')">3</button>
+                <button onclick="showSection('C4')">4 &gt</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+    <!-- Page 2 ISO's -->
+    <div id="C21I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Commision 3 ISO.jpg" alt="Commision 3 ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('C2')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="C22I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Commision 4 ISO.jpg" alt="Commision 4 ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('C2')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <!--Page 3 Commisions-->
+    <div id="C3" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite C3.jpg" alt="Commmision 3"usemap="#home-image-map-C3">
+
+            <map name="home-image-map-C3">
+                <!-- Define clickable areas using <area> tags -->
+                <area shape="rect" coords="126,243,940,867" href="javascript:void(0);" onclick="showSection('C31I')" alt="Breakfeast Crowd">
+                <area shape="rect" coords="584,896,1158,1362" href="javascript:void(0);" onclick="showSection('C32I')" alt="Visit our gallery">
+            </map>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('C1')">&lt 1</button>
+                <button onclick="showSection('C2')">2</button>
+                <button onclick="showSection('C3')">3</button>
+                <button onclick="showSection('C4')">4 &gt</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+    <!-- Page 2 ISO's -->
+    <div id="C31I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Commision 5 ISO.jpg" alt="Commision 5 ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('C3')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="C32I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Commision 6 ISO.jpg" alt="Commision 6 ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('C3')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <!--Page 4 Commisions-->
+    <div id="C4" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite c4.jpg" alt="Commmision 4" usemap="#home-image-map-C4">
+
+            <map name="home-image-map-C4">
+                <!-- Define clickable areas using <area> tags -->
+                <area shape="poly" coords="73,350,698,350,698,887,836,887,836,1312,75,1312" href="javascript:void(0);" onclick="showSection('C41I')" alt="Commision 7">
+    
+            </map>
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('C1')">&lt 1</button>
+                <button onclick="showSection('C2')">2</button>
+                <button onclick="showSection('C3')">3</button>
+                <button onclick="showSection('C4')">4 &gt</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+    <!-- Page 4 ISO's -->
+    <div id="C41I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Commision 7 ISO.jpg" alt="Commision 7 ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('C4')">Back</button>   
+                </div>
+        </div>
+        </div>
+</body>
+</html>

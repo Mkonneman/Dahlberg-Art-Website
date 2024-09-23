@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stephanie Dahlberg Art Studio</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+       
+
+        body {
+            background-color: rgb(100, 52, 52);
+            background-attachment: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        .wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black; /* Black background for wrapper */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .image-frame {
+            position: relative;
+            max-width: 100%;
+            max-height: 100%; /* Adjust height to make space for buttons */
+            text-align: center;
+            flex: 1; /* Allow image frame to take available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-frame img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .section {
+            display: none; /* Hide all sections by default */
+        }
+        
+        .section.active {
+            display: flex; /* Show the active section */
+        }
+        .nav-buttons {
+            position: absolute;
+            bottom: 10px; /* Position at the bottom of the image */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+        .nav-buttons button {
+            background: none;
+            border: none;
+            margin: 10px;
+            font-size: 35px;
+            color: white;
+            cursor: pointer;
+            font-family: 'Patrick Hand', cursive; /* Apply the crayon-like font */
+        }
+        .nav-buttons button:hover {
+            color: rgb(200, 100, 100);
+        }
+        .nav-buttons button:focus {
+            outline: none; /* Remove default outline */
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+            scrollToTop();
+        }
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        function goToHome() {
+            window.location.href = 'home.html';
+        }
+        function goToPaintings() {
+            window.location.href = 'paintings.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show the first section by default
+            showSection('P1');
+        });
+    </script>
+</head>
+<body>
+    <!-- Page 1 -->
+    <div id="P1" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite P1.jpg" alt="Painting 1" usemap="#home-image-map-P1">
+                <map name="home-image-map-P1">
+                    <!-- Define clickable areas using <area> tags -->
+                    <area shape="rect" coords="774,61,1184,385" href="javascript:void(0);" onclick="showSection('P11I')" alt="Breakfeast Crowd">
+                    <area shape="poly" coords="423,410,1079,410,1079,852,750,852,750,924,423,924" href="javascript:void(0);" onclick="showSection('P12I')" alt="Jammin'">
+                    <area shape="rect" coords="38,295,394,754" href="javascript:void(0);" onclick="showSection('P13I')" alt="Summer Dreams">
+                    <area shape="rect" coords="18,779,408,1482" href="javascript:void(0);" onclick="showSection('P14I')" alt="I Hope You Dance">
+                    <area shape="rect" coords="423,946,724,1312" href="javascript:void(0);" onclick="showSection('P15I')" alt="Tire Swing">
+                    <area shape="rect" coords="751,853,1189,1410" href="javascript:void(0);" onclick="showSection('P16I')" alt="Number 15">
+                </map>
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('P1')">&lt 1</button>
+                <button onclick="showSection('P2')">2</button>
+                <button onclick="showSection('P3')">3</button>
+                <button onclick="showSection('P4')">4</button>
+                <button onclick="showSection('P5')">5</button>
+                <button onclick="showSection('P6')">6</button>
+                <button onclick="showSection('P7')">7 &gt</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+   <!-- Page 1 ISO's -->
+    <div id="P11I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/BreakFest Club ISO.jpg" alt="Breakfeast Crowd ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P1')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P12I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Jammin ISO.jpg" alt="Jammin' ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P1')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P13I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Summer Dream ISO.jpg" alt="Summer Dreams ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P1')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P14I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/I Hope You Dance ISO.jpg" alt="I Hope You Dance ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P1')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P15I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Tire Swing ISO.jpg" alt="Tire Swing ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P1')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P16I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Number 15 ISO.jpg" alt="Number 15 ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P1')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="P2" class="section">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite P2.jpg" alt="Painting 2" usemap="#home-image-map-P2">
+
+            <map name="home-image-map-P2">
+                <!-- Define clickable areas using <area> tags -->
+                <area shape="rect" coords="765,22,1200,377" href="javascript:void(0);" onclick="showSection('P21I')"alt="I Gotta Bite!">
+                <area shape="poly" coords="26,290,757,290,757,398,692,399,692,870,757,879,757,1148,551,1148,551,949,161,949,160,1148,26,1148" href="javascript:void(0);" onclick="showSection('P22I')" alt="Purple Rein">
+                <area shape="rect" coords="691,399,1196,870" href="javascript:void(0);" onclick="showSection('P23I')" alt="Nights With Ladonna">
+                <area shape="rect" coords="161,949,551,1407" href="javascript:void(0);" onclick="showSection('P24I')" alt="Diane's Flute">
+                <area shape="poly" coords="758,915,1193,915,1193,1387,673,1387,672,1150,757,1150" href="javascript:void(0);" onclick="showSection('P25I')" alt="Bubbles">
+            </map>
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('P1')">&lt 1</button>
+                <button onclick="showSection('P2')">2</button>
+                <button onclick="showSection('P3')">3</button>
+                <button onclick="showSection('P4')">4</button>
+                <button onclick="showSection('P5')">5</button>
+                <button onclick="showSection('P6')">6</button>
+                <button onclick="showSection('P7')">7 &gt</button>
+                <button onclick="goToHome()">Home</button>  
+            </div>
+        </div>
+    </div>
+    <!-- Page 2 ISO's -->
+    <div id="P21I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/I Gotta Bite ISO.jpg" alt="I gotta Bite ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P2')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P22I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Purple Rein ISO.jpg" alt="Purple Rein ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P2')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P23I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Nights With LaDonna ISO.jpg" alt="Nights With Ladonna ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P2')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P24I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Dianes Flute ISO.jpg" alt="Diane’s Flute ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P2')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P25I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Bubbles ISO.jpg" alt="Bubbles ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P2')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div id="P3" class="section">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite P3.jpg" alt="Painting 3" usemap="#home-image-map-P3">
+
+            <map name="home-image-map-P3">
+                <!-- Define clickable areas using <area> tags -->
+                <area shape="rect" coords="183,230,699,653" href="javascript:void(0);" onclick="showSection('P31I')" alt="Home Late">
+                <area shape="poly" coords="608,43,1167,43,1167,877,609,887,608,658,699,657,699,230,608,230" href="javascript:void(0);" onclick="showSection('P32I')" alt="Athena">
+                <area shape="rect" coords="24,692,605,1384" href="javascript:void(0);" onclick="showSection('P33I')" alt="Sheet Music">
+                <area shape="rect" coords="641,912,1200,1357" href="javascript:void(0);" onclick="showSection('P34I')" alt="Jazz">
+            </map>
+
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('P1')">&lt 1</button>
+                <button onclick="showSection('P2')">2</button>
+                <button onclick="showSection('P3')">3</button>
+                <button onclick="showSection('P4')">4</button>
+                <button onclick="showSection('P5')">5</button>
+                <button onclick="showSection('P6')">6</button>
+                <button onclick="showSection('P7')">7 &gt</button>
+                <button onclick="goToHome()">Home</button>     
+            </div>
+        </div>
+    </div>
+    <!-- Page 3 ISO's -->
+    <div id="P31I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Home Late ISO.jpg" alt="Home Late ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P3')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P32I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Athena ISO.jpg" alt="Athena ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P3')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P33I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Sheet Music ISO.jpg" alt="Sheet Music ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P3')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P34I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Jazz ISO.jpg" alt="Jazz ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P3')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Page 4 -->
+    <div id="P4" class="section">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite P4.jpg" alt="Painting 4" usemap="#home-image-map-P4">
+            
+            <map name="home-image-map-P4">
+                <!-- Define clickable areas using <area> tags -->
+                <area shape="poly" coords="579,18,1197,18,1197,474,645,474,645,313,579,313" href="javascript:void(0);" onclick="showSection('P41I')" alt="Sweet Gypsy Man">
+                <area shape="rect" coords="32,315,642,813" href="javascript:void(0);" onclick="showSection('P42I')" alt="He's My Bro">
+                <area shape="poly" coords="666,490,1186,490,1186,891,777,891,775,821,666,820" href="javascript:void(0);" onclick="showSection('P43I')" alt="Waterworld">
+                <area shape="rect" coords="32,821,775,1411" href="javascript:void(0);" onclick="showSection('P44I')" alt="The Roundup">
+                <area shape="rect" coords="829,913,1179,1396" href="javascript:void(0);" onclick="showSection('P45I')" alt="The Kansas City Sprite">
+
+                <div class="nav-buttons">
+                <button onclick="showSection('P1')">&lt 1</button>
+                <button onclick="showSection('P2')">2</button>
+                <button onclick="showSection('P3')">3</button>
+                <button onclick="showSection('P4')">4</button>
+                <button onclick="showSection('P5')">5</button>
+                <button onclick="showSection('P6')">6</button>
+                <button onclick="showSection('P7')">7 &gt</button>
+                <button onclick="goToHome()">Home</button>    
+            </div>
+        </div>
+    </div>
+    <!-- Page 4 ISO's -->
+    <div id="P41I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Sweet Gypsy Man ISO.jpg" alt="Sweet Gypsy Man ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P4')">Back</button>    
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P42I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/He's My Bro ISO.jpg" alt="He's My Bro ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P4')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P43I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Waterworld ISO.jpg" alt="Waterworld ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P4')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P44I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/The Roundup ISO.jpg" alt="The Roundup ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P4')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P45I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/The Kansas City Sprite ISO.jpg" alt="The Kansas City Sprite ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P4')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Page 5 -->
+    <div id="P5" class="section">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite P5.jpg" alt="Painting 5" usemap="#home-image-map-P5">
+
+            <map name="home-image-map-P5">
+                <area shape="rect" coords="687,134,1178,528" href="javascript:void(0);" onclick="showSection('P51I')" alt="The Violin Section">
+                <area shape="rect" coords="28,303,664,842" href="javascript:void(0);" onclick="showSection('P52I')" alt="Table for One">
+                <area shape="rect" coords="702,566,1176,1176" href="javascript:void(0);" onclick="showSection('P53I')" alt="In the Wings">
+                <area shape="rect" coords="29,880,664,1387" href="javascript:void(0);" onclick="showSection('P54I')" alt="Headin' In">
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('P1')">&lt 1</button>
+                <button onclick="showSection('P2')">2</button>
+                <button onclick="showSection('P3')">3</button>
+                <button onclick="showSection('P4')">4</button>
+                <button onclick="showSection('P5')">5</button>
+                <button onclick="showSection('P6')">6</button>
+                <button onclick="showSection('P7')">7 &gt</button>
+                <button onclick="goToHome()">Home</button>            
+            </div>
+        </div>
+    </div>
+    <!-- Page 5 ISO's -->
+    <div id="P51I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/The Violin Section ISO.jpg" alt="The Violin Section ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P5')">Back</button>    
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P52I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Table for One ISO.jpg" alt="Table for One ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P5')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P53I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/In the Wings ISO.jpg" alt="In the Wings ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P5')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P54I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Headin' In ISO.jpg" alt="Headin' In ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P5')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Page 6 -->  
+    <div id="P6" class="section">
+            <div class="image-frame">
+                <img src="pages/ArtWebsite P6.jpg" alt="Painting 6" usemap="#home-image-map-P6">
+
+                <map name="home-image-map-P6">
+                    <area shape="rect" coords="152,259,693,685" href="javascript:void(0);" onclick="showSection('P61I')" alt="The Fishing Hole">
+                    <area shape="poly" coords="599,33,1179,34,1179,766,600,766,600,686,693,685,693,259,600,259" href="javascript:void(0);" onclick="showSection('P62I')" alt="Peral">
+                    <area shape="poly" coords="34,777,748,777,748,,935,559,935,559,1350,34,1350" href="javascript:void(0);" onclick="showSection('P63I')" alt="KC Scout">
+                    <area shape="rect" coords="559,935,1199,1465" href="javascript:void(0);" onclick="showSection('P64I')" alt="Miss Potter">
+
+                <!-- Navigation Buttons -->
+                <div class="nav-buttons">
+                    <button onclick="showSection('P1')">&lt 1</button>
+                    <button onclick="showSection('P2')">2</button>
+                    <button onclick="showSection('P3')">3</button>
+                    <button onclick="showSection('P4')">4</button>
+                    <button onclick="showSection('P5')">5</button>
+                    <button onclick="showSection('P6')">6</button>
+                    <button onclick="showSection('P7')">7 &gt</button>
+                    <button onclick="goToHome()">Home</button>            
+                </div>
+            </div>
+    </div>
+    <!-- Page 6 ISO's -->
+    <div id="P61I" class="section">
+    <div class="wrapper">
+    <div class="image-frame">
+        <img src="pages/The Fishin' Hole ISO.jpg" alt="The Fishin' Hole ISO">
+            <div class="nav-buttons">
+                <button onclick="showSection('P6')">Back</button>    
+            </div>
+    </div>
+    </div>
+    </div>
+    <div id="P62I" class="section">
+    <div class="wrapper">
+    <div class="image-frame">
+        <img src="pages/Peral ISO.jpg" alt="Peral ISO">
+            <div class="nav-buttons">
+                <button onclick="showSection('P6')">Back</button>   
+            </div>
+    </div>
+    </div>
+    </div>
+    <div id="P63I" class="section">
+    <div class="wrapper">
+    <div class="image-frame">
+        <img src="pages/KC Scout ISO.jpg" alt="KC Scout ISO">
+            <div class="nav-buttons">
+                <button onclick="showSection('P6')">Back</button>   
+            </div>
+    </div>
+    </div>
+    </div>
+    <div id="P64I" class="section">
+    <div class="wrapper">
+    <div class="image-frame">
+        <img src="pages/Miss Potter ISO.jpg" alt="Miss Potter ISO">
+            <div class="nav-buttons">
+                <button onclick="showSection('P6')">Back</button>   
+            </div>
+    </div>
+    </div>
+    </div>
+
+     <!-- Page 7 -->
+    <div id="P7" class="section">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite P7.jpg" alt="Painting 7" usemap="#home-image-map-P7">
+
+            <map name="home-image-map-P7">
+                <area shape="rect" coords="89,295,564,856" href="javascript:void(0);" onclick="showSection('P71I')" alt="England Swings">
+                <area shape="rect" coords="600,34,1179,766" href="javascript:void(0);" onclick="showSection('P72I')" alt="Bliss">
+                <area shape="rect" coords="24,895,630,1420" href="javascript:void(0);" onclick="showSection('P73I')" alt="Grandpa's Dock">
+                <area shape="rect" coords="660,796,1188,1466" href="javascript:void(0);" onclick="showSection('P74I')" alt="All We Like Sheep">
+
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('P1')">&lt 1</button>
+                <button onclick="showSection('P2')">2</button>
+                <button onclick="showSection('P3')">3</button>
+                <button onclick="showSection('P4')">4</button>
+                <button onclick="showSection('P5')">5</button>
+                <button onclick="showSection('P6')">6</button>
+                <button onclick="showSection('P7')">7 &gt</button>
+                <button onclick="goToHome()">Home</button>            
+            </div>
+        </div>
+    </div>
+    <!-- Page 7 ISO's -->
+    <div id="P71I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/England Swings ISO.jpg" alt="England Swings ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P7')">Back</button>    
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P72I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Bliss ISO.jpg" alt="Bliss ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P7')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P73I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/Grandpas Dock ISO.jpg" alt="Grandpas Dock ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P7')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+    <div id="P74I" class="section">
+        <div class="wrapper">
+        <div class="image-frame">
+            <img src="pages/All We Like Sheep ISO.jpg" alt="All We Like Sheep ISO">
+                <div class="nav-buttons">
+                    <button onclick="showSection('P7')">Back</button>   
+                </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

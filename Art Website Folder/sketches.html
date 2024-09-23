@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stephanie Dahlberg Art Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+
+        body {
+            background-color: rgb(100, 52, 52);
+            background-attachment: scroll;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .image-frame {
+            position: relative;
+            max-width: 100%;
+            max-height: 100%; /* Adjust height to make space for buttons */
+            text-align: center;
+            flex: 1; /* Allow image frame to take available space */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-frame img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .section {
+            display: none; /* Hide all sections by default */
+        }
+        .section.active {
+            display: flex; /* Show the active section */
+        }
+        .nav-buttons {
+            position: absolute;
+            bottom: 10px; /* Position at the bottom of the image */
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            white-space: nowrap;
+        }
+        .nav-buttons button {
+            background: none;
+            border: none;
+            margin: 10px;
+            font-size: 35px;
+            color: white;
+            cursor: pointer;
+            font-family: 'Patrick Hand', cursive; /* Apply the crayon-like font */
+        }
+        .nav-buttons button:hover {
+            color: rgb(200, 100, 100);
+        }
+        .nav-buttons button:focus {
+            outline: none; /* Remove default outline */
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+            scrollToTop();
+        }
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        function goToHome() {
+            window.location.href = 'home.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show the first section by default
+            showSection('S1');
+        });
+    </script>
+</head>
+<body>
+    <!-- This part starts the sketch portion of the website-->
+    <div id="S1" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S1.jpg" alt="Sketch 1">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+
+    <div id="S2" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S2.jpg" alt="Sketch 2">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+
+    <div id="S3" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S3.jpg" alt="Sketch 3">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+
+    <div id="S4" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S4.jpg" alt="Sketch 4">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+
+    <div id="S5" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S5.jpg" alt="Sketch 5">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>  
+            </div>
+        </div>
+    </div>
+
+    <div id="S6" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S6.jpg" alt="Sketch 6">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+
+    <div id="S7" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S7.jpg" alt="Sketch 7">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>    
+            </div>
+        </div>
+    </div>
+
+    <div id="S8" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S8.jpg" alt="Sketch 8">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>     
+            </div>
+        </div>
+    </div>
+
+    <div id="S9" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S9.jpg" alt="Sketch 9">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+
+    <div id="S10" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S10.jpg" alt="Sketch 10">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>    
+            </div>
+        </div>
+    </div>
+
+    <div id="S11" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S11.jpg" alt="Sketch 11">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>    
+            </div>
+        </div>
+    </div>
+
+    <div id="S12" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S12.jpg" alt="Sketch 12">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>    
+            </div>
+        </div>
+    </div>
+
+    <div id="S13" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S13.jpg" alt="Sketch 13">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>  
+            </div>
+        </div>
+    </div>
+
+    <div id="S14" class="section active">
+        <div class="image-frame">
+            <img src="pages/ArtWebsite S14.jpg" alt="Sketch 14">
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button onclick="showSection('S1')">1</button>
+                <button onclick="showSection('S2')">2</button>
+                <button onclick="showSection('S3')">3</button>
+                <button onclick="showSection('S4')">4</button>
+                <button onclick="showSection('S5')">5</button>
+                <button onclick="showSection('S6')">6</button>
+                <button onclick="showSection('S7')">7</button>
+                <button onclick="showSection('S8')">8</button>
+                <button onclick="showSection('S9')">9</button>
+                <button onclick="showSection('S10')">10</button>
+                <button onclick="showSection('S11')">11</button>
+                <button onclick="showSection('S12')">12</button>
+                <button onclick="showSection('S13')">13</button>
+                <button onclick="showSection('S14')">14</button>
+                <button onclick="goToHome()">Home</button>   
+            </div>
+        </div>
+    </div>
+</body>
+</html>
